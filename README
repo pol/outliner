@@ -23,11 +23,12 @@ Usage
 Modify Outline.rb with your outline
  - use the existing one as a template to start
  - you can use any of the aliased item methods as bullets, nest as deeply as you like.
- - technically speaking, you can name Outline.rb whatever you want, but it will still build to an "outline.html" file (you will have to update the watch.rb for it to work if you do that.)
 
 Run `Outline.rb` to create an outline (goes to stdout), use ' > someoutline.html' to save it out
 Run `watch.rb .` to continually build 'outline.html' from Outline.rb
-You can re-name Outline.rb to something else, but then update the watch.rb script.
+
+Note: you can name Outline.rb whatever you want, it just outputs the html to stdout.  However, the watch.rb file is hardcoded to watch "Outline.rb" and dump the html into "outline.html". This is easy to change if you want to adjust the behavior.
+
 
 Credit
 I used other people's code:
@@ -39,6 +40,7 @@ I used other people's code:
 
 Todo:
  - spec tests would be nice
+ - make this a gem
  - create a local cache of linked js files so that the tool is self-contained
  - create an Outlines dir and a Compiled dir that contains outlines and the compiled html of them
  - use bundler to manage the gem(s)
