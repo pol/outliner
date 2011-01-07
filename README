@@ -23,6 +23,7 @@ Usage
 Modify Outline.rb with your outline
  - use the existing one as a template to start
  - you can use any of the aliased item methods as bullets, nest as deeply as you like.
+ - the item methods are: o, b, t, p, s, todo (add more to outliner.rb if you want)
 
 Run `Outline.rb` to create an outline (goes to stdout), use ' > someoutline.html' to save it out
 Run `watch.rb .` to continually build 'outline.html' from Outline.rb
