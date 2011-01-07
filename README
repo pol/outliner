@@ -1,0 +1,49 @@
+Outliner.rb
+
+Why does this exist?
+
+It went something like this:
+ 1. I want to make a nested collapsible outline to do collaborative work in a group setting
+ 3. All of the tools I can find are either too complicated or don't collapse outline nodes
+ 4. Hmmmm.... textmate code folding would work great for this.
+ 5. Derp de derp... writing the outline, pretending it's ruby, using blocks for the collapsing
+ 6. Thought: this is basically a little DSL, I bet I could compile this to HTML pretty easy
+ 7. Hm, I bet I could get jQuery to collapse the list items
+ 8. Oooh, now it's pretty and portable!
+ 9. Jade: Hey, Pol, put the source on github so I can use it!
+ 10. Me: Ok, but now I need to make a Readme and stuff!
+
+Installation
+
+Git the code
+Install the fssm gem (for the watch.rb, so this is optional)
+
+Usage
+
+Modify Outline.rb with your outline
+ - use the existing one as a template to start
+ - you can use any of the aliased item methods as bullets, nest as deeply as you like.
+ - technically speaking, you can name Outline.rb whatever you want, but it will still build to an "outline.html" file (you will have to update the watch.rb for it to work if you do that.)
+
+Run `Outline.rb` to create an outline (goes to stdout), use ' > someoutline.html' to save it out
+Run `watch.rb .` to continually build 'outline.html' from Outline.rb
+You can re-name Outline.rb to something else, but then update the watch.rb script.
+
+Credit
+I used other people's code:
+ - The latest jQuery (MIT/GPL) http://jquery.org/
+ - Jörn Zaefferer's jquery-treeview (MIT/GPL) http://docs.jquery.com/Plugins/Treeview
+   - Also using his jquery-treeview stylesheets that he links to in his demo
+ - carhartl's jquery-cookie javascript plugin (No License Stated!) https://github.com/carhartl/jquery-cookie
+ - Travis Tilley's FSSM gem (MIT/GPL) https://github.com/ttilley/fssm
+
+Todo:
+ - spec tests would be nice
+ - create a local cache of linked js files so that the tool is self-contained
+ - create an Outlines dir and a Compiled dir that contains outlines and the compiled html of them
+ - use bundler to manage the gem(s)
+ - create a better readme
+ - return to the method_missing strategy and try to make it work so that list items can have flexible names
+
+Note:
+Thanks! Msg me if you have problems.
